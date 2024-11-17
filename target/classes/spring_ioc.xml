@@ -37,7 +37,8 @@
     -->
     <context:component-scan base-package="cn.tulingxueyuan" >
        <!-- <context:include-filter type="assignable" expression="cn.tulingxueyuan.controller.UserController"/>-->
-        <!--<context:exclude-filter type="assignable" expression=""/>-->
+<!--        <context:exclude-filter type="assignable" expression="cn.tulingxueyuan.beans.User"/>-->
+      <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
     <!--引用外部属性资源文件   可以通过@Value来获取里面的key值-->

@@ -42,6 +42,9 @@ public class UserController {
     //@Resource
      UserService userService;
 
+    public UserController() {
+        System.out.println("UserController已加载");
+    }
 
     /**
      * @Autowired 也可以写在构造器上面
@@ -68,5 +71,12 @@ public class UserController {
 
     public void getUser(){
         userService.getBean();
+    }
+
+    @Override
+    public String toString() {
+        return "UserController{" +
+            "userService=" + userService +
+            '}';
     }
 }

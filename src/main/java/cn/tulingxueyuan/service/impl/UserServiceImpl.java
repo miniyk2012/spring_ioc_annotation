@@ -23,4 +23,11 @@ public class UserServiceImpl implements UserService{
         System.out.println("UserServiceImpl");
         userDao.getUser();
     }
+
+    @Override
+    public String toString() {
+        return "UserServiceImpl{" +
+            "userDao=" + userDao +
+            '}';
+    }
 }

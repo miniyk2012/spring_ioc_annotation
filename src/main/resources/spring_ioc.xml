@@ -41,6 +41,6 @@
 <!--      <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
     </context:component-scan>
 
-    <!--引用外部属性资源文件   可以通过@Value来获取里面的key值-->
+    <!--引用外部属性资源文件   可以通过@Value(${xx})来获取里面的key值-->
     <context:property-placeholder location="db.properties"></context:property-placeholder>
 </beans>

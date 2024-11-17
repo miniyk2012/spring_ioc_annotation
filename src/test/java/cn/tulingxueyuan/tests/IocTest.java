@@ -33,13 +33,12 @@ public class IocTest {
     public void test02() {
         User bean = ioc.getBean(User.class);
         System.out.println(bean);
-        System.out.println(bean.getName());
     }
 
     @Test
     public void test03() {
         UserController bean = ioc.getBean(UserController.class);
-        bean.getUser();
+        System.out.println(bean);
     }
 
     @Test

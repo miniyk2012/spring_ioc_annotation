@@ -15,7 +15,9 @@ public class User {
     1.除了可以写硬编码值
     2.还可以写${}  、#{}
     * */
-    //@Value("#{role.name}")
+//    @Value("#{role.name}")  // SPEL表达式
+    @Value("${mysql.username}")
+//    @Value("杨恺")
     private String name;
 
     public String getName() {

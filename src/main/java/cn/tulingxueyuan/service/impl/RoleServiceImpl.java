@@ -1,6 +1,7 @@
 package cn.tulingxueyuan.service.impl;
 
 import cn.tulingxueyuan.beans.Role;
+import cn.tulingxueyuan.beans.User;
 import cn.tulingxueyuan.dao.UserDao;
 import cn.tulingxueyuan.service.BaseService;
 import cn.tulingxueyuan.service.RoleService;
@@ -13,12 +14,20 @@ import org.springframework.stereotype.Service;
  * @Slogan 致敬大师，致敬未来的你
  */
 @Service
-public class RoleServiceImpl  implements RoleService {
-    @Autowired
-    UserDao userDao;
+public class RoleServiceImpl  implements BaseService<Role> {
 
-    public void getBean() {
+    @Autowired
+    private Role role;
+
+    public Role getBean() {
         System.out.println("RoleServiceImpl");
-        userDao.getUser();
+        return role;
+    }
+
+    @Override
+    public String toString() {
+        return "RoleServiceImpl{" +
+            "role=" + role +
+            '}';
     }
 }

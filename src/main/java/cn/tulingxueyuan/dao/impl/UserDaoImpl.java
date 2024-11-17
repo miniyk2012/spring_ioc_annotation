@@ -1,6 +1,8 @@
 package cn.tulingxueyuan.dao.impl;
 
+import cn.tulingxueyuan.beans.User;
 import cn.tulingxueyuan.dao.UserDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 /***
@@ -10,12 +12,19 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class UserDaoImpl implements UserDao {
 
-    public void getUser() {
-        System.out.println("查询数据库");
+    @Autowired
+    private User user;
+
+    public User getUser() {
+        System.out.printf("查询数据库: %s", user);
+        return user;
     }
+
 
     @Override
     public String toString() {
-        return "UserDaoImpl{}";
+        return "UserDaoImpl{" +
+            "user=" + user +
+            '}';
     }
 }

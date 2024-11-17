@@ -44,4 +44,11 @@ public class Role {
     public  void destory(){
         System.out.println("销毁");
     }
+
+    @Override
+    public String toString() {
+        return "Role{" +
+            "name='" + name + '\'' +
+            '}';
+    }
 }

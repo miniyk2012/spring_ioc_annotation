@@ -1,6 +1,7 @@
 package cn.tulingxueyuan.controller;
 
 
+import cn.tulingxueyuan.beans.Role;
 import cn.tulingxueyuan.beans.User;
 import cn.tulingxueyuan.service.BaseService;
 import cn.tulingxueyuan.service.UserService;
@@ -38,9 +39,9 @@ public class UserController {
      *  @Autowired 优先根据类型匹配
      */
     @Autowired
-    //@Qualifier("userServiceImpl")
+    @Qualifier("userServiceImpl")
     //@Resource
-     UserService userService;
+     BaseService userService;
 
     public UserController() {
         System.out.println("UserController已加载");

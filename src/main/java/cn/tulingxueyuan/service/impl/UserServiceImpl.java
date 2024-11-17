@@ -15,13 +15,13 @@ import org.springframework.stereotype.Service;
  */
 @Service    //userServiceImpl
 //@Primary    //设置自动注入的主要Bean
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements BaseService<User>{
     @Autowired
     UserDao userDao;
 
-    public void getBean() {
+    public User getBean() {
         System.out.println("UserServiceImpl");
-        userDao.getUser();
+        return userDao.getUser();
     }
 
     @Override

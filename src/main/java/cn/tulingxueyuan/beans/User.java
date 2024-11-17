@@ -37,4 +37,11 @@ public class User {
     private void destroyByConfig() {
         System.out.println("User销毁");
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+            "name='" + name + '\'' +
+            '}';
+    }
 }

@@ -5,6 +5,7 @@ import cn.tulingxueyuan.beans.User;
 import cn.tulingxueyuan.controller.UserController;
 import cn.tulingxueyuan.service.RoleService;
 import cn.tulingxueyuan.service.UserService;
+import cn.tulingxueyuan.service.BaseService;
 import cn.tulingxueyuan.service.impl.RoleServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,6 +32,7 @@ public class IocTest {
     @Test
     public void test02() {
         User bean = ioc.getBean(User.class);
+        System.out.println(bean);
         System.out.println(bean.getName());
     }
 

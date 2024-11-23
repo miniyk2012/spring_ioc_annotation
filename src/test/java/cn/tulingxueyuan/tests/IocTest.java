@@ -7,6 +7,7 @@ import cn.tulingxueyuan.service.RoleService;
 import cn.tulingxueyuan.service.UserService;
 import cn.tulingxueyuan.service.BaseService;
 import cn.tulingxueyuan.service.impl.RoleServiceImpl;
+import cn.tulingxueyuan.service.impl.RoleServiceImpl2;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -51,7 +52,6 @@ public class IocTest {
 
     @Test
     public void test05() {
-
         Role bean = ioc.getBean(Role.class);
         ioc.close();
     }
@@ -64,12 +64,14 @@ public class IocTest {
         System.out.println(bean.getClass());
 
 
-        RoleServiceImpl roleService=new RoleServiceImpl();
+        RoleServiceImpl2 roleService=new RoleServiceImpl2();
         // instanceof  用户判断前面的对象是否是否吗的类，或者子类，或者接口
         if(roleService instanceof  RoleService)
         {
             System.out.println("OK");
             //RETURN
+        } else {
+            System.out.println("NO");
         }
 
 

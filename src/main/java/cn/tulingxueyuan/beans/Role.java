@@ -14,8 +14,8 @@ import javax.annotation.PreDestroy;
  * @Slogan 致敬大师，致敬未来的你
  */
 @Component
-//@DependsOn("user")  depends-on
-//@Lazy  ==lazy-init
+//@DependsOn("user")  // depends-on
+@Lazy  // lazy-init
 //@Scope("prototype")
 public class Role {
     @Value("管理员")
@@ -36,13 +36,13 @@ public class Role {
     // 生命周期回调-3  初始化回调
     @PostConstruct
     public void init(){
-        System.out.println("初始化");
+        System.out.println("Role初始化");
     }
 
     // 生命周期回调-3  销毁回调
     @PreDestroy
     public  void destory(){
-        System.out.println("销毁");
+        System.out.println("Role销毁");
     }
 
     @Override

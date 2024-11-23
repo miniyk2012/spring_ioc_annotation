@@ -1,12 +1,8 @@
 package cn.tulingxueyuan.service.impl;
 
 import cn.tulingxueyuan.beans.Role;
-import cn.tulingxueyuan.beans.User;
-import cn.tulingxueyuan.dao.UserDao;
 import cn.tulingxueyuan.service.BaseService;
 import cn.tulingxueyuan.service.RoleService;
-import cn.tulingxueyuan.service.UserService;
-import jdk.jfr.Label;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
@@ -17,23 +13,22 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @Lazy
-public class RoleServiceImpl  implements BaseService<Role> {
+public class RoleServiceImpl2 implements RoleService {
 
     @Autowired
     private Role role;
 
-    public RoleServiceImpl() {
+    public RoleServiceImpl2() {
         System.out.println("RoleServiceImpl init");
     }
 
-    public Role getBean() {
-        System.out.println("RoleServiceImpl");
-        return role;
+    public void getBean() {
+        System.out.println("RoleServiceImpl2");
     }
 
     @Override
     public String toString() {
-        return "RoleServiceImpl{" +
+        return "RoleServiceImpl2{" +
             "role=" + role +
             '}';
     }

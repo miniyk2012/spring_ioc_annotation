@@ -39,8 +39,8 @@ public class UserController {
      *  @Autowired 优先根据类型匹配
      */
     @Autowired
+//    @Resource
     @Qualifier("userServiceImpl")
-    //@Resource
      BaseService userService;
 
     public UserController() {
@@ -51,19 +51,20 @@ public class UserController {
      * @Autowired 也可以写在构造器上面
      * ·默认优先根据参数类型去匹配
      * ·如果匹配到多个类型则会按照参数名字匹配
+
     @Autowired
-    public UserController(UserService userService) {
+    public UserController(BaseService<User> userService) {
         this.userService = userService;
-    }*/
+    } */
 
     /**
      * @Autowired 也可以写在方法上面
      * ·默认优先根据参数类型去匹配
      * ·如果匹配到多个类型则会按照参数名字匹配
-     * @param UserService
+     * @param BaseService
 
     @Autowired
-    public void createUserSerive(@Qualifier("userServiceImpl")UserService userService){
+    public void createUserSerive(@Qualifier("userServiceImpl")BaseService userService){
         this.userService=userService;
     } */
 
